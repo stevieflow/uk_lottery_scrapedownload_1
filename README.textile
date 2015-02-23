@@ -1,0 +1,5 @@
+Address: "Department for Culture Media and Sport, 2-4 Cockspur Street, London, SW1Y 5DH":http://www.culture.gov.uk/contact_us/7211.aspx
+
+__BEGINPREVIEWSQL__
+select substr(`Grant date`, 0, 5) as month, sum(`Grant amount`) as total, count(*) as ngrants from swdata group by month order by month desc limit 10
+__ENDPREVIEWSQL__
